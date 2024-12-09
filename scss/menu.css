@@ -1,0 +1,334 @@
+/*.header {
+    background-color: #fff0ed; 
+
+}
+
+.header-container {
+    display: flex;  
+    align-items: center;
+    padding: 5px;
+
+}
+
+.header__logo {
+   width: 50px;  
+   height: auto;  
+
+}
+
+.header__title {
+    font-size: 33px; 
+    margin:0; 
+    margin-left: 1rem;
+    color: #393939; 
+
+}
+
+.header__nav{
+    display: flex; 
+     gap: 30rem;    
+
+}
+
+.nav-links {
+    list-style: none; 
+    text-decoration: none;
+    display: flex; 
+    gap: 20px; 
+    margin: 0;
+
+}
+
+.nav__item{
+    font-family: sans-serif;
+    text-decoration: none;
+    justify-content: right;
+    font-size: 15px; 
+    color: #393939;    
+
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    height: 50vh;
+    background-image: url('../assets/coffee-circle.jpg');
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.title-box {
+    position: absolute;
+    position: 5px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 200px;
+    border-width: 5px;
+    background-color: #393939;
+    border-color:#5BACC3;
+    color: #fff;
+    padding: 10px 20px;
+
+
+}
+
+.title__box-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    padding: 2rem;
+
+
+}
+
+.sub-navigation {
+    width: 100%;
+    background-color: #393939;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+
+}
+
+.sub__list  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub__listitem{
+    margin: 20px; 
+}
+
+.sub-nav a {
+    text-decoration: none;
+    color: #fff;
+
+}
+.menu-section {
+    text-align: center;
+    padding: 0px 0;
+
+}
+.menu-item-1,.menu-item-2,.menu-item-3{
+    margin-bottom: 10px;
+    padding: 15px;           
+
+}
+.menu__header  {
+    font-family: sans-serif;
+    font-size: 60px;
+   font-weight: lighter;
+   /*text-weight: light 300*/
+/* margin-bottom: 10px;
+
+
+}
+
+.menu-subheader {
+    font-size: 33px;
+    font-weight: lighter;
+    /*text-weight: light 300*/
+/* margin-bottom: 10px;
+}
+
+ .menu__para{
+    color: #5BACC3;
+}
+
+.menu-item-1,.menu-item-3  {
+    background-color:#fff0ed ;
+}
+
+.menu-item-2 {
+    background-color: #f7f7f7 ;
+}*/
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+.header {
+  background-color: #fff0ed;
+  padding: 10px;
+}
+.header .header-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: space-between;
+}
+.header .header-container .logo_container {
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+.header .header-container .logo_container .header__logo {
+  width: 50px;
+  height: auto;
+}
+.header .header-container .header__title {
+  font-size: 33px;
+  margin: 0;
+  margin-left: 1rem;
+  color: #393939;
+  font-weight: 500;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 30px;
+  justify-content: flex-end;
+}
+.nav-links .nav__item {
+  display: inline-block;
+  text-decoration: none;
+}
+.nav-links .nav__item a {
+  color: black;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+}
+.nav-links .nav__item.active a {
+  color: #5BACC3;
+}
+
+.absolute-left {
+  position: absolute;
+  left: -50px;
+}
+.absolute-left img {
+  width: 100px;
+}
+
+.absolute-right {
+  position: absolute;
+  right: -50px;
+}
+.absolute-right img {
+  width: 100px;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  height: 75vh;
+  background-image: url("../assets/coffee-circle.jpg");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.title-box {
+  position: absolute;
+  position: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  border-width: 5px;
+  background-color: #393939;
+  border-color: #5BACC3;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.title-box::before {
+  content: "";
+  border: 4px solid #5BACC3;
+  width: 330px;
+  height: 210px;
+  display: block;
+  position: absolute;
+  left: -8px;
+  top: -8px;
+}
+
+.title__box-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  padding: 2rem;
+}
+
+.sub-navigation {
+  width: 100%;
+  background-color: #393939;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.sub__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub__listitem {
+  margin: 20px;
+}
+
+.sub-nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-section {
+  text-align: center;
+  padding: 0px 0;
+}
+
+.menu-item-1, .menu-item-2, .menu-item-3 {
+  padding: 15px;
+}
+
+.menu__header {
+  font-family: sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.menu-subheader {
+  font-size: 33px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.menu__para {
+  color: #5BACC3;
+}
+
+.menu-item-1, .menu-item-3 {
+  background-color: #fff0ed;
+}
+
+.menu-item-2 {
+  background-color: #f7f7f7;
+}/*# sourceMappingURL=menu.css.map */

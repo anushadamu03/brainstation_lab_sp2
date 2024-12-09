@@ -1,0 +1,326 @@
+@import './partials/global';
+
+// Variables
+$primary-color: #5bacc3;
+$secondary-color: #fff0ed;
+$text-color-dark: #393939;
+$text-color-light: #fff;
+$font-family-main: 'Open Sans', sans-serif;
+$font-size-large: 60px;
+$font-size-medium: 50px;
+$font-size-small: 18px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box-shadow($color, $blur, $spread) {
+  box-shadow: 0 $blur $spread rgba($color, 0.1);
+}
+
+// Hero Section
+.hero {
+  background-color: $secondary-color;
+  padding: 60px 0;
+
+  .hero-container {
+    max-width: 1250px;
+    @include flex-center;
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  .hero-content {
+    font-family: $font-family-main;
+    text-align: left;
+    flex: 1;
+    margin-top: 10px;
+    padding-left: 50px;
+    padding-bottom: 100px;
+
+    .hero__header {
+      font-weight: 500;
+      margin-bottom: 30px;
+      font-size: $font-size-medium;
+    }
+
+    .hero__para {
+      font-size: $font-size-small;
+      line-height: 25px;
+    }
+  }
+
+  .hero__image {
+    flex: 1;
+    text-align: center;
+
+    img {
+      max-width: 280px;
+      margin: auto;
+    }
+  }
+
+  .shop-now-button {
+    position: absolute;
+    background-color: $primary-color;
+    color: $text-color-light;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 20px 35px;
+
+    &::before {
+      content: "";
+      border: 2px solid black;
+      width: 160px;
+      height: 58px;
+      display: block;
+      position: absolute;
+      left: -8px;
+      top: -8px;
+    }
+  }
+}
+
+// Products Section
+.products {
+  text-align: center;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  padding: 30px 0;
+
+  .products-container {
+    max-width: 1300px;
+    margin: auto;
+    display: flex
+  }
+
+  .product__heading {
+    font-family: $font-family-main;
+    font-size: $font-size-large;
+    font-weight: lighter;
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  .product-list {
+    background-color: $text-color-light;
+    @include flex-center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 320px;
+    height: 440px;
+    margin: 20px auto;
+    border-radius: 10px;
+    @include box-shadow($text-color-dark, 4px, 8px);
+
+    .product-info {
+      background: #fef0ed;
+      padding: 15px 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+        .product-price{
+          color:#5BACC3
+        }
+    }
+
+    .product__item {
+      height: 65%;
+      object-fit: cover;
+      padding: 20px;
+    }
+
+    .product-info {
+      text-align: center;
+      background-color: $secondary-color;
+      border-radius: 5px;
+
+      .product-name {
+        font-size: $font-size-small;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .product-price,
+      .product-quantity {
+        font-size: 14px;
+      }
+      .product-quantity{
+        text-align: left; 
+      }
+      .product-name{
+        font-size: 33px;
+        font-weight: 100;
+        margin:0px;
+      }
+      .product-price{
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .view-all-button {
+    display: block;
+    margin: 20px auto;
+    background-color: $primary-color;
+    color: $text-color-light;
+    padding: 20px;
+    text-decoration: none;
+    max-width: 120px;
+    position: relative;
+
+    &::before {
+      content: "";
+      border: 2px solid black;
+      width: 160px;
+      height: 58px;
+      display: block;
+      position: absolute;
+      left: -8px;
+      top: -8px;
+    }
+  }
+}
+
+// Image with Text Section
+@keyframes rotate360 {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+.image-with-text {
+  max-width: 1300px;
+  margin: auto;
+  padding: 75px 0;
+
+  .flex {
+    display: flex;
+
+    .flex-1 {
+      flex: 1;
+    }
+  }
+
+  .icons-container {
+    max-width: 400px;
+
+    h2 {
+      font-size: $font-size-medium;
+      font-weight: 100;
+    }
+
+    .sub-icons {
+      display: flex;
+      @include flex-center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .poster-background {
+    background: url('../assets/coldbrewbackground.png');
+    width: 400px;
+    height: 100%;
+    margin: auto;
+    @include flex-center;
+
+    img {
+      max-width: 250px;
+      height: 250px;
+    }
+
+    .rotating-image {
+      display: block;
+      margin: auto;
+      animation: rotate360 5s linear infinite; // Adjust duration as needed
+    }
+
+  }
+
+  .learn-more {
+    background-color: $primary-color;
+    color: $text-color-light;
+    padding: 20px;
+    display: block;
+    max-width: 150px;
+    text-align: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      border: 2px solid black;
+      width: 190px;
+      height: 58px;
+      display: block;
+      position: absolute;
+      left: -8px;
+      top: -8px;
+    }
+  }
+}
+
+// Footer
+footer {
+  background-color: $secondary-color;
+  position: relative;
+  overflow: hidden;
+
+  .footer-class {
+    max-width: 1300px;
+    padding: 50px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+
+    .footer__title {
+      font-size: 33px;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    .footer__para {
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .footer__img {
+      width: 50px;
+      margin: 5px;
+    }
+  }
+}
+
+// Discount Animation
+@keyframes changeColor {
+  0% {
+    background-color: #5BACC3;
+  }
+
+  100% {
+    background-color: #393939;
+  }
+}
+
+.discount {
+  background-color: $text-color-dark;
+  text-align: center;
+  padding: 5px;
+  font-size: 25px;
+  font-family: $font-family-main;
+  margin: 150px;
+  color: $text-color-light;
+  animation: changeColor 5s infinite;
+}
